@@ -1,0 +1,38 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        <div class="perfil">
+          <div class="img">
+            <img src="{{avatar}}" alt="{{username}}">
+          </div>
+          <p class="perfil-p">{{username}}</p>
+        </div>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+
+    <div class="container-login">
+      <div class="pagina">
+        <div class="card-login">
+
+          <h1>Atualiza categoria:</h1>
+          <div class="label-float">
+              <input [(ngModel)]='this.carregaCategoriaParaEdicao.nome' type="text" id="usuario" placeholder="Usuário" required>
+          </div>
+
+          <div class="botao">
+            <button (click)="memoriaCategoria()" type="submit" id="cadastrar" >Cancelar</button>
+            <button (click)='atualizaCategoria()' type="submit" id="cadastrar">Atualizar</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</div>

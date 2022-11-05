@@ -10,3 +10,10 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));
+
+  /* FICA OBSERVANDO SEMPRE QUE A PAGINA E RECARREGADA */
+// eslint-disable-next-line prefer-arrow/prefer-arrow-functions
+window.addEventListener('beforeunload', function() {
+  localStorage.removeItem('token');
+
+}, false);
